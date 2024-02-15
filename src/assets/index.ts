@@ -1,0 +1,38 @@
+import HeroBackground from "./HeroBG.png"
+import TestimonialBackground from "./TestimonialBG.png"
+import NavLogo from "./LogoNavbar.svg"
+import Twitter from "./Twitter.svg"
+import Github from "./Github.svg"
+import Telegram from "./Telegram.svg"
+import Discord from "./Discord.svg"
+import GradientCardCount from "./CardCount.svg"
+import HeroImage from "./HeroImage.png"
+import BenefitFeature1 from "./Benefit (1).png"
+import BenefitFeature2 from "./Benefit (2).png"
+import BenefitFeature3 from "./Benefit (3).png"
+import BenefitFeature4 from "./Benefit (4).png"
+import BenefitFeature5 from "./Benefit (5).png"
+import BenefitFeature6 from "./Benefit (6).png"
+import BenefitFeature7 from "./Benefit (7).png"
+import TestimonialProfils from "./TestimonialIcon.png"
+
+
+export {
+    HeroBackground,
+    TestimonialBackground,
+    NavLogo,
+    Twitter,
+    Github,
+    Telegram,
+    Discord,
+    GradientCardCount,
+    HeroImage,
+    BenefitFeature1,
+    BenefitFeature2,
+    BenefitFeature3,
+    BenefitFeature4,
+    BenefitFeature5,
+    BenefitFeature6,
+    BenefitFeature7,
+    TestimonialProfils
+}
