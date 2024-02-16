@@ -15,7 +15,7 @@ const Hero = () => {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
             }}>
-            <aside className="flex flex-col gap-4 h-full py-36 items-center border-r border-white border-opacity-50 cursor-pointer">
+            <aside className="flex flex-col gap-4 h-full py-36 items-center border-r border-white border-opacity-50">
                 {socialMediaLinks.map((social, i) => (
                     <a href={social.link}>
                         <img
@@ -48,7 +48,7 @@ const Hero = () => {
                 </h1>
                 <img src={HeroImage} alt="HeroImage" className="w-[550px] object-contain" />
             </div>
-            <div className='absolute z-0 -right-1 w-[40%] h-[40%] rounded-full circle__gradient' />
+            <div className='absolute z-0 -right-1 w-[20%] h-[20%] rounded-full circle__gradient' />
         </section>
     )
 

@@ -7,6 +7,8 @@ import Telegram from "./Telegram.svg"
 import Discord from "./Discord.svg"
 import GradientCardCount from "./CardCount.svg"
 import HeroImage from "./HeroImage.png"
+import HammerCusrsor from "./HammerCursor.png"
+import BGCardFeatures from "./BgCardFeature.svg"
 import BenefitFeature1 from "./Benefit (1).png"
 import BenefitFeature2 from "./Benefit (2).png"
 import BenefitFeature3 from "./Benefit (3).png"
@@ -27,6 +29,8 @@ export {
     Discord,
     GradientCardCount,
     HeroImage,
+    HammerCusrsor,
+    BGCardFeatures,
     BenefitFeature1,
     BenefitFeature2,
     BenefitFeature3,

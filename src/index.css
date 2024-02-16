@@ -14,6 +14,7 @@
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  cursor : url('./assets/HammerCursor.png'), auto;
 }
 
 .circle__gradient {
@@ -27,6 +28,6 @@
 }
 
 .button:hover{
-    cursor: pointer;
+    cursor: url('./assets/HammerCursor.png'), auto;
     transform: scale(1.05);
 }
