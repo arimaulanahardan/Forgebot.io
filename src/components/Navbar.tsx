@@ -6,7 +6,9 @@ import {
 } from '../assets'
 import { navLinks } from '../constants'
 import { FaArrowRight } from "react-icons/fa";
-import Button from '../common/components/Button'
+import Button from '../common/components/Button';
+import styles from '../styles';
+
 
 const Navbar = () => {
 
@@ -16,13 +18,12 @@ const Navbar = () => {
         <nav className='w-full flex py-6 justify-between items-center navbar' style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}>
             <div className='absolute z-1/2 -left-1/3  w-[40%] h-[40%] rounded-full circle__gradient' />
             <div className='flex items-center gap-4'>
-                <img src={NavLogo} alt='#' className=' scale-100'
+                <img src={NavLogo} alt='#' className='scale-100'
                 />
-                <h1 className='text-primaryTextColor text-[20px]'>
+                <h1 className='text-primaryTextColor text-[25px]'>
                     Forget Bot
                 </h1>
             </div>
-
 
             {/* Desktop View */}
             <div className="item-center flex">
@@ -30,7 +31,8 @@ const Navbar = () => {
                     {navLinks.map((nav, i) => (
                         <li
                             key={nav.id}
-                            className={`font-montserrat font-normal cursor-pointer text-[18px] ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-dimWhite hover:text-white hover:underline mr-10`}
+                            className={`${styles.paragraph}
+                             cursor-pointer ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} hover:text-white hover:underline mr-10`}
                         >
                             <a href={`#${nav.id}`}>
                                 {nav.tittle}

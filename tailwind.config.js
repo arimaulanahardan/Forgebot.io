@@ -10,7 +10,7 @@ export default {
         primary : "#0A0400",
         secondary : "#E16307 ",
         primaryTextColor : "#F5F5F5",
-        dimWhite : "rgba(255, 255, 255, 0.40)"
+        dimWhite : "rgba(142, 142, 142, 1)"
       },
       fontFamily : {
         medievalSharp : ["MedievalSharp", "cursive"]
