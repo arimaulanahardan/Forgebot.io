@@ -17,7 +17,9 @@ const Hero = () => {
             }}>
             <aside className="flex flex-col gap-4 h-full py-36 items-center border-r border-white border-opacity-50">
                 {socialMediaLinks.map((social, i) => (
-                    <a href={social.link}>
+                    <a 
+                    key={social.id}
+                    href={social.link}>
                         <img
                             key={social.id}
                             src={social.image}

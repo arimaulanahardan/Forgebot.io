@@ -34,7 +34,8 @@ const Navbar = () => {
                             className={`${styles.paragraph}
                              ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} hover:text-white hover:underline mr-10`}
                         >
-                            <a href={`#${nav.id}`}>
+                            <a 
+                            href={`#${nav.id}`}>
                                 {nav.tittle}
                             </a>
                         </li>

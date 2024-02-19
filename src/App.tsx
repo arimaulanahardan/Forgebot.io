@@ -6,6 +6,9 @@ import {
   Count,
   Benefit,
   Feature,
+  CTA,
+  Testimonial,
+  Footer
 } from "./components"
 
 
@@ -23,6 +26,9 @@ function App() {
           <Count />
           <Benefit />
           <Feature />
+          <Testimonial />
+          <CTA/>
+          <Footer />
         </div>
       </div>
     </div>

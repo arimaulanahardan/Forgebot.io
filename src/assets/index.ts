@@ -8,6 +8,8 @@ import Discord from "./Discord.svg"
 import GradientCardCount from "./CardCount.svg"
 import HeroImage from "./HeroImage.png"
 import HammerCusrsor from "./HammerCursor.png"
+import CTABackground from "./CTA.svg"
+import Logo from "./LogoForgeBot.png"
 import BGCardFeatures from "./BgCardFeature.svg"
 import BenefitFeature1 from "./Benefit (1).png"
 import BenefitFeature2 from "./Benefit (2).png"
@@ -30,6 +32,8 @@ export {
     GradientCardCount,
     HeroImage,
     HammerCusrsor,
+    CTABackground,
+    Logo,
     BGCardFeatures,
     BenefitFeature1,
     BenefitFeature2,
@@ -38,5 +42,5 @@ export {
     BenefitFeature5,
     BenefitFeature6,
     BenefitFeature7,
-    TestimonialProfils
+    TestimonialProfils,
 }

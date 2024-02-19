@@ -26,7 +26,8 @@ const CardFeature: React.FC<CardFeaturesProps> = ({ id, description, image, link
                 <div className="h-[125px] px-2">
                     <h1 className='text-center font-normal text-primaryTextColor text-[18px] pt-6 pb-2 leading-[22px] '>{description}</h1>
                 </div>
-                    <a href={link} className='text-secondary w-full text-end px-4 hover:underline'>Learn More {">>"}</a>
+                    <a 
+                    href={link} className='text-secondary w-full text-end px-4 hover:underline'>Learn More {">>"}</a>
             </div>
 
         </div>

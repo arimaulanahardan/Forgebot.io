@@ -25,7 +25,7 @@ const CardBenefit: React.FC<cardBenefitProps> = ({ id, title, description, link 
                 <div className='pt-6 w-full pb-6'>
                     <h1 className='font-montserrat font-semibold text-primaryTextColor text-[18px] text-center'>{title}</h1>
                     <div className='w-full p-4 mt-4'>
-                        <p className='text-[14px] text-dimWhite text-left text-normal text-wrap leading-normal'>{description}</p>
+                        <p className='text-[14px] text-primaryTextColor text-left text-normal text-wrap leading-normal'>{description}</p>
                     </div>
                 </div>
             </div>
