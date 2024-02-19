@@ -15,12 +15,7 @@ import {
 function App() {
   return (
     <div className='bg-primary w-full'>
-      <div className={`${styles.paddingX} ${styles.flexCenter} `}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-      </div>
-      <div className={`bg-primary ${styles.flexCenter}`}>
+      <div className={`${styles.flexCenter} `}>
         <div className={`${styles.boxWidth}`}>
           <Hero />
           <Count />
@@ -28,7 +23,6 @@ function App() {
           <Feature />
           <Testimonial />
           <CTA/>
-          <Footer />
         </div>
       </div>
     </div>

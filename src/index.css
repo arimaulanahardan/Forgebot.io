@@ -15,6 +15,7 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   cursor : url('./assets/HammerCursor.png'), auto;
+  background-color: primary;
 }
 
 .circle__gradient {

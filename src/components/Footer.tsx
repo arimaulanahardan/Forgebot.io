@@ -22,7 +22,7 @@ const Footer = () => {
                     })}
                 </div>
                 <div className="flex items-center">
-                    <a href="#" className="text-dimWhite hover:text-white hover:underline text-[18px] font-normal">Terms of Service</a>
+                    <a href="/term&condition" className="text-dimWhite hover:text-white hover:underline text-[18px] font-normal">Terms & Conditions</a>
                 </div>
             </div>
         </div>

@@ -8,7 +8,9 @@ import Button from "../common/components/Button";
 
 const Hero = () => {
     return (
-        <section className="w-full flex justify-between items-center"
+        <section
+        id="home"
+         className="w-full flex justify-between items-center"
             style={{
                 backgroundImage: `url(${HeroBackground})`,
                 backgroundSize: 'cover',
