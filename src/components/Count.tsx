@@ -5,7 +5,7 @@ const CountStat = () => {
     return (
         <section className='w-full flex flex-col justify-center items-center m-5'>
 
-            <div className='flex gap-10 '>
+            <div className='sm:flex grid grid-cols-1 sm:gap-10 gap-2 '>
                 {stats.map((stat, i) => (
                     <CardCount
                         key={stat.id}

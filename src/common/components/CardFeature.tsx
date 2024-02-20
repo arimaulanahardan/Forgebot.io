@@ -13,14 +13,14 @@ const CardFeature: React.FC<CardFeaturesProps> = ({ id, description, image, link
     return (
         <div
             id={id}
-            className="button flex flex-col justify-between items-center rounded-[4px]"
+            className="button flex flex-col w-full justify-between items-center rounded-[4px]"
             style={{
                 background: `url(${BGCardFeatures}) no-repeat center`,
                 backgroundSize: "contain",
-                height: "450px",
+                height: "100%",
             }}
         >
-            <div className="relative flex flex-col items-center p-2 mt-3">
+            <div className=" relative flex flex-col items-center p-2 w-[300px]">
                 <img src={image} alt="#"
                 />
                 <div className="h-[125px] px-2">

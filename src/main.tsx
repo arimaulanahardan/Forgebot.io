@@ -22,7 +22,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <div className='bg-primary w-full'>
-      <div className={` ${styles.flexCenter} ${styles.paddingX} `}>
+      <div className={` ${styles.flexCenter} `}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
           <RouterProvider router={router} />

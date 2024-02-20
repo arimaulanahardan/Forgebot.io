@@ -1,26 +1,26 @@
 import { useState } from 'react'
 import {
-    // close,
     NavLogo,
-    // menu
 } from '../assets'
 import { navLinks } from '../constants'
 import { FaArrowRight } from "react-icons/fa";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 import Button from '../common/components/Button';
 import styles from '../styles';
 
 
 const Navbar = () => {
 
-    // const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false)
 
     return (
-        <nav className='w-full flex py-6 justify-between items-center navbar' style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}>
-            <div className='absolute z-1/2 -left-1/3  w-[40%] h-[40%] rounded-full circle__gradient' />
-            <div className='flex items-center gap-4'>
-                <img src={NavLogo} alt='#' className='scale-100'
+        <nav className='w-full flex py-6 sm:px-8 px-4 justify-between items-center navbar' style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}>
+            <span className='absolute z-1/2 -left-1/3  w-[40%] h-[40%] aspect-square rounded-full animate-pulse circle__gradient' />
+            <div className='flex items-center sm:gap-4 gap-1'>
+                <img src={NavLogo} alt='#' className='w-[50px] h-[50px] object-contain'
                 />
-                <h1 className='text-primaryTextColor text-[25px]'>
+                <h1 className='text-primaryTextColor sm:text-[25px] text-[18px]'>
                     Forget Bot
                 </h1>
             </div>
@@ -34,8 +34,8 @@ const Navbar = () => {
                             className={`${styles.paragraph}
                              ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} hover:text-white hover:underline mr-10`}
                         >
-                            <a 
-                            href={`${nav.id}`}>
+                            <a
+                                href={`${nav.id}`}>
                                 {nav.tittle}
                             </a>
                         </li>
@@ -51,29 +51,30 @@ const Navbar = () => {
             />
 
             {/* Mobile View */}
-            {/* <div className='sm:hidden flex flex-1 justify-end items-center'>
-                <img
-                    src={toggle ? close : menu}
-                    alt='menu'
-                    className='w-[28px] h-[28px] object-contain'
-                    onClick={() => setToggle((previous) => !previous)}
-                />
-                <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-                    <ul className='list-none flex flex-col justify-end items-center flex-1'>
-                        {navLinks.map((nav, i) => (
-                            <li
-                                key={nav.id}
-                                className={`font-montserrat font-normal text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white mr-10`}
-                            >
-                                <a href={`#${nav.id}`}>
-                                    {nav.title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                    
+            <div className="sm:hidden">
+                {toggle ? (
+                    <IoClose className="text-white w-[28px] h-[28px] object-contain" onClick={() => setToggle(false)} />
+                ) : (
+                    <HiMenuAlt3 className="text-white w-[28px] h-[28px] object-contain" onClick={() => setToggle(true)} />
+                )}
+                <div className='absolute bg-black-gradient top-20 right-0 my-2 w-full rounded-sm sidebar'
+                style ={{
+                    background: 'linear-gradient(149deg, rgba(17, 0, 0, 0.76) 20.89%, rgba(115, 71, 4, 0.68) 125.24%)',
+                }}
+                >
+                    {toggle && (
+                        <ul className="text-center p-4">
+                            {navLinks.map(nav => (
+                                <li key={nav.id} className="text-white text-xl py-2">
+                                    <a href={`${nav.id}`} onClick={() => setToggle(false)}>
+                                        {nav.tittle}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
-            </div> */}
+            </div>
         </nav>
     )
 }

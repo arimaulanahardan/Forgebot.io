@@ -4,15 +4,13 @@ interface cardBenefitProps {
     id: string;
     title: string;
     description: string;
-    link: string;
 }
 
-const CardBenefit: React.FC<cardBenefitProps> = ({ id, title, description, link }) => {
+const CardBenefit: React.FC<cardBenefitProps> = ({ id, title, description }) => {
     return (
         <div
             id={id}
-            className="button w-full flex mb-4 flex-col justify-between items-center"
-            onClick={() => window.open(link)}
+            className="w-[400px] flex mb-4 flex-col justify-between items-center pointer-events-none"
         >
             <div className=""
                 style={{
@@ -23,9 +21,9 @@ const CardBenefit: React.FC<cardBenefitProps> = ({ id, title, description, link 
                 }}>
 
                 <div className='pt-6 w-full pb-6'>
-                    <h1 className='font-montserrat font-semibold text-primaryTextColor text-[18px] text-center'>{title}</h1>
+                    <h1 className='font-semibold text-primaryTextColor text-[18px] text-center'>{title}</h1>
                     <div className='w-full p-4 mt-4'>
-                        <p className='text-[14px] text-primaryTextColor text-left text-normal text-wrap leading-normal'>{description}</p>
+                        <p className='text-[14px] text-primaryTextColor text-left text-normal text-wrap leading-normal px-6'>{description}</p>
                     </div>
                 </div>
             </div>

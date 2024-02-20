@@ -10,7 +10,7 @@ const Hero = () => {
     return (
         <section
         id="home"
-         className="w-full flex justify-between items-center"
+         className="w-full flex"
             style={{
                 backgroundImage: `url(${HeroBackground})`,
                 backgroundSize: 'cover',
@@ -30,29 +30,29 @@ const Hero = () => {
                     </a>
                 ))}
             </aside>
-            <div className='px-6 flex flex-row justify-between items-center w-full'>
-                <h1 className={`flex-1 ${styles.heading2}`}>
+            <div className='px-6 mt-6 flex sm:flex-row flex-col justify-between items-center w-full'>
+                <h1 className={`flex-1  ${styles.heading2}`}>
                     Experience{" "}
                     <span className='text-secondary'> The Future of Trading</span> {" "} <span>With <br className='sm:block hiden' />Forge Bot</span> <br className='sm:block hiden' />{" "}
                     <p className={`${styles.paragraph} text-primaryTextColor max-w-[470px] mt-5`}>
                         swift and smooth trading anywhere, anytime, with our user-friendly Telegram bot.
                     </p>
-                    <div className="flex gap-12 pt-8">
+                    <div className="flex sm:gap-12 gap-4 pt-8 flex-center items-center justify-center">
                         <Button
                             style="mt-0"
                             title="Get Started"
                             onClick={() => { console.log('Button Clicked') }}
                         />
                         <div className="button flex rounded-[2px] px-6 py-2 border border-secondary hover">
-                            <a className=" text-[16px] text-center font-normal text-secondary" href="#">
+                            <a className="sm:text-[16px] text-[12px] text-center font-normal text-secondary" href="#">
                                 Learn More
                             </a>
                         </div>
                     </div>
                 </h1>
-                <img src={HeroImage} alt="HeroImage" className="w-[550px] object-contain" />
+                <img src={HeroImage} alt="HeroImage" className="sm:w-[550px] w-[400px] object-contain " />
             </div>
-            <div className='absolute z-0 -right-1 w-[20%] h-[20%] rounded-full circle__gradient' />
+            <span className='absolute z-0 -right-1 aspect-square w-[20%] h-[20%] rounded-full circle__gradient animate-pulse' />
         </section>
     )
 
