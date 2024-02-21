@@ -1,4 +1,4 @@
-import { CTABackground,
+import { 
     Logo
  } from "../assets";
 import Button from "../common/components/Button";

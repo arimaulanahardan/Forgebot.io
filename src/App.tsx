@@ -1,21 +1,17 @@
-import React from 'react'
 import styles from './styles'
 import {
-  Navbar,
   Hero,
   Count,
   Benefit,
   Feature,
   CTA,
-  Testimonial,
-  Footer
+  Testimonial
 } from "./components"
 
 
 function App() {
   return (
-    <div className='bg-primary w-full'>
-      <div className={`${styles.flexCenter} `}>
+      <div className={`bg-primary ${styles.flexCenter} `}>
         <div className={`${styles.boxWidth}`}>
           <Hero />
           <Count />
@@ -25,7 +21,6 @@ function App() {
           <CTA/>
         </div>
       </div>
-    </div>
   )
 }
 

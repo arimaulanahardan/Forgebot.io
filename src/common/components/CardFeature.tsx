@@ -19,7 +19,7 @@ const CardFeature: React.FC<CardFeaturesProps> = ({ id, description, image, link
                 backgroundSize: "contain",
             }}
         >
-            <div className="relative flex flex-col items-center p-2 sm:w-[300px] w-[320px]">
+            <div className="relative flex flex-col items-center p-2 w-full">
                 <img src={image} alt="#"
                 />
                 <div className="h-[125px] px-2">

@@ -1,6 +1,5 @@
 import CardTestimonial from "../common/components/CardTestimonials"
 import { testimonials } from "../constants"
-import styles from "../styles"
 import { TestimonialBackground } from "../assets"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
@@ -80,7 +79,7 @@ const Testimonials = () => {
                         <div className="items-center w-full grid grid-cols-3 gap-4">
                             {testimonials.map((testimonial, i) => (
                                 <CardTestimonial
-                                    key={testimonial.id}
+                                    key={i}
                                     id={testimonial.id}
                                     name={testimonial.name}
                                     username={testimonial.username}

@@ -58,7 +58,7 @@ export const benefits = [
     {
         id: "benefit1",
         tittle: "Revenue Share",
-        description: "The rewards are directly tied to the quantity of tokens you possess. Holders are entitled to 40% of transaction fees and 2.5% of the overall trading volume of $FORGE. These rewards are computed in intervals of 5 hours and can be claimed after 24 hours. It's important to note that transferring more than 180 tokens within every 3-hour interval will lead to the forfeiture of your share of revenue. Eligibility for these rewards requires holding a minimum of 15 $FORGE tokens.",
+        description: "Holders are entitled to 40% of transaction fees and 2.5% of the overall trading volume of $FORGE. These rewards are computed in intervals of 5 hours and can be claimed after 24 hours. Eligibility for these rewards requires holding a minimum of 15 $FORGE tokens.",
         link: "https://www.google.com"
     },
     {
@@ -76,7 +76,7 @@ export const benefits = [
     {
         id: "benefit4",
         tittle: "Referral Initiative",
-        description: "ForgeBot users have the opportunity to create a referral code, unlocking extra perks. The person who refers others earns 28% of the transaction fees from those they referred, while the referees enjoy a 15% discount on their transaction fees. All you need is your unique referral code to start enjoying these advantages, blocksmiths.",
+        description: "ForgeBot users have the opportunity to create a referral code, unlocking extra perks. The person who refers others earns 28% of the transaction fees from those they referred, while the referees enjoy a 15% discount on their transaction fees.",
         link: "https://www.google.com"
     },
 ]

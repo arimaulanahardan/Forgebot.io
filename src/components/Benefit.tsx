@@ -22,7 +22,6 @@ const Benefit = () => {
         window.addEventListener("resize", updateStateOnResize);
         return () => window.removeEventListener("resize", updateStateOnResize);
     }, []);
-    const isMobile = window.innerWidth <= 762;
 
     return (
         <section
@@ -40,41 +39,9 @@ const Benefit = () => {
                     Experience the future of trading with ForgeBot, your all-in-one solution across multiple blockchians, offering seamless integration with Telegram for a user-friendly experience and effective communication.
                 </p>
             </div>
-            {isMobile ? (
-            <motion.div
-                ref={carouselRef}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4 }}
-                whileTap={{ cursor: "grabbing" }}
-                className="cursor-grab overflow-hidden w-11/12"
-            >
-                <motion.div
-                    key={width}
-                    drag="x"
-                    dragConstraints={{ right: 0, left: -width }}
-                    className="flex space-x-12"
-                >
+                <div className="md:flex sm:grid grid-cols-1 w-full gap-4">
                     {benefits.map((benefit, i) => (
-                        <motion.div
-                            key={i}
-                            className="min-h-[15rem] min-w-[20rem] "
-                        >
-                            <CardBenefit
-                                key={benefit.id}
-                                id={benefit.id}
-                                title={benefit.tittle}
-                                description={benefit.description}
-                            />
-
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </motion.div>
-            ) : (
-                <div className="flex gap-6 w-full mx-6 items-center justify-center ">
-                    {benefits.map((benefit, i) => (
-                        <div key={i} className='button'>
+                        <div key={i} className='button items-center flex justify-center'>
                             <CardBenefit
                                 key={benefit.id}
                                 id={benefit.id}
@@ -85,8 +52,6 @@ const Benefit = () => {
                         </div>
                     ))}
                 </div>
-            )
-        }
         </section>
     )
 }
