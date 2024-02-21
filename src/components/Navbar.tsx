@@ -35,7 +35,8 @@ const Navbar = () => {
                              ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} hover:text-white hover:underline mr-10`}
                         >
                             <a
-                                href={`${nav.id}`}>
+                                key={i}
+                                href={`#${nav.id}`}>
                                 {nav.tittle}
                             </a>
                         </li>
@@ -57,16 +58,16 @@ const Navbar = () => {
                 ) : (
                     <HiMenuAlt3 className="text-white w-[28px] h-[28px] object-contain" onClick={() => setToggle(true)} />
                 )}
-                <div className='absolute bg-black-gradient top-20 right-0 my-2 w-full rounded-sm sidebar'
-                style ={{
-                    background: 'linear-gradient(149deg, rgba(17, 0, 0, 0.76) 20.89%, rgba(115, 71, 4, 0.68) 125.24%)',
-                }}
+                <div className='absolute top-20 right-0 my-2 w-full rounded-sm'
+                    style={{
+                        background: 'linear-gradient(313deg, rgba(17, 0, 0, 0.95) 36.78%, rgba(115, 71, 4, 0.85) 136.83%)',
+                    }}
                 >
                     {toggle && (
                         <ul className="text-center p-4">
                             {navLinks.map(nav => (
                                 <li key={nav.id} className="text-white text-xl py-2">
-                                    <a href={`${nav.id}`} onClick={() => setToggle(false)}>
+                                    <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
                                         {nav.tittle}
                                     </a>
                                 </li>

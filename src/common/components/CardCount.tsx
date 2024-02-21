@@ -23,7 +23,7 @@ const CardCount: React.FC<CardCountProps> = ({ id, title, value }) => {
         >
             <div className="items-center text-center">
                 <h1 className="text-primaryTextColor font-medievalSharp font-bold text-[35px]">
-                    <CountUp end={value} duration={5}/> <span className="text-secondary">+</span>
+                    <CountUp end={value} duration={10}/> <span className="text-secondary">+</span>
                 </h1>
                 <h1 className={`${styles.paragraph}`}>{title}</h1>
             </div>

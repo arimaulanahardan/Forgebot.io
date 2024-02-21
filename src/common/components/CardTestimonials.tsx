@@ -16,8 +16,8 @@ const CardTestimonial: React.FC<cardTestimonialsProps> = ({ id, name, username, 
     return (
         <div
             id={id}
-            className='button w-full flex  cursor-pointer m-4'
-            onClick={() => window.open(link, '_blank')}
+            className='button sm:w-full w-[300px] flex   cursor-pointer m-4'
+            onClick={() => window.open(link, '_blank')} 
         >
 
             <div className="text-center"

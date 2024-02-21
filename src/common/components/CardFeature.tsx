@@ -13,18 +13,17 @@ const CardFeature: React.FC<CardFeaturesProps> = ({ id, description, image, link
     return (
         <div
             id={id}
-            className="button flex flex-col w-full justify-between items-center rounded-[4px]"
+            className="button flex flex-col bg-red-500 sm:w-full w-screen justify-between items-center rounded-[4px]"
             style={{
                 background: `url(${BGCardFeatures}) no-repeat center`,
                 backgroundSize: "contain",
-                height: "100%",
             }}
         >
-            <div className=" relative flex flex-col items-center p-2 w-[300px]">
+            <div className="relative flex flex-col items-center p-2 sm:w-[300px] w-[320px]">
                 <img src={image} alt="#"
                 />
                 <div className="h-[125px] px-2">
-                    <h1 className='text-center font-normal text-primaryTextColor text-[18px] pt-6 pb-2 leading-[22px] '>{description}</h1>
+                    <h1 className='text-center font-normal text-primaryTextColor sm:text-[18px] text-[14px] pt-6 pb-2 leading-[22px] '>{description}</h1>
                 </div>
                     <a 
                     href={link} className='text-secondary w-full text-end px-4 hover:underline'>Learn More {">>"}</a>

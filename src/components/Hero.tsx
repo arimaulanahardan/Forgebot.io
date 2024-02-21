@@ -20,7 +20,7 @@ const Hero = () => {
             <aside className="flex flex-col gap-4 h-full py-36 items-center border-r border-white border-opacity-50">
                 {socialMediaLinks.map((social, i) => (
                     <a 
-                    key={social.id}
+                    key={i}
                     href={social.link}>
                         <img
                             key={social.id}
@@ -37,7 +37,7 @@ const Hero = () => {
                     <p className={`${styles.paragraph} text-primaryTextColor max-w-[470px] mt-5`}>
                         swift and smooth trading anywhere, anytime, with our user-friendly Telegram bot.
                     </p>
-                    <div className="flex sm:gap-12 gap-4 pt-8 flex-center items-center justify-center">
+                    <div className="flex sm:gap-12 gap-4 pt-8 flex-center items-center sm:justify-start justify-center">
                         <Button
                             style="mt-0"
                             title="Get Started"
