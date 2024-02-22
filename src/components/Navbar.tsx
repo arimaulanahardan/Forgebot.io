@@ -17,7 +17,9 @@ const Navbar = () => {
     return (
         <nav className='w-full flex sm:py-6 py-5 sm:px-8 px-4 justify-between items-center navbar' style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}>
             <span className='absolute z-1/2 -left-1/3  w-[40%] h-[40%] aspect-square rounded-full animate-pulse circle__gradient' />
-            <div className='flex items-center sm:gap-4 gap-1'>
+            <div className='flex items-center sm:gap-4 gap-1'
+            onClick={() => window.location.href = '/#home'}
+            >
                 <img src={NavLogo} alt='#' className='w-[50px] h-[50px] object-contain'
                 />
                 <h1 className='text-primaryTextColor sm:text-[25px] text-[18px]'>
