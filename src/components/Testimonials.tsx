@@ -1,34 +1,15 @@
 import CardTestimonial from "../common/components/CardTestimonials"
 import { testimonials } from "../constants"
 import { TestimonialBackground } from "../assets"
-import { useEffect, useRef, useState } from "react"
-import { motion } from "framer-motion"
+import { Carousel, IconButton } from "@material-tailwind/react";
 
 const Testimonials = () => {
-    const [width, setWidth] = useState(0);
-    const carouselRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        function updateStateOnResize() {
-            if (!carouselRef.current) return;
-            const { scrollWidth, offsetWidth } = carouselRef.current;
-            setWidth(() => scrollWidth - offsetWidth);
-        }
-
-        updateStateOnResize();
-
-        window.addEventListener("resize", updateStateOnResize);
-        return () => window.removeEventListener("resize", updateStateOnResize);
-    }, []);
-
-    const isMobile = window.innerWidth <= 
-    762;
-    ;
+    const isMobile = window.innerWidth <= 762;
 
     return (
         <section
-        id="Testimonial"
-            className="w-full flex justify-between items-center"
+            id="Testimonial"
+            className="w-full flex flex-col justify-center items-center pb-10 relative"
             style={{
                 backgroundImage: `url(${TestimonialBackground})`,
                 backgroundSize: 'cover',
@@ -36,63 +17,105 @@ const Testimonials = () => {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <div className="flex flex-col justify-between items-center p-6">
-                <h1 className='text-primaryTextColor font-bold text-[40px] text-center w-full'>
+            <div className="items-center">
+                <h1 className='text-primaryTextColor font-bold sm:text-[40px] text-[25px] text-center sm:w-full p-6'>
                     Testimonials
                 </h1>
+            </div>
 
-                {isMobile ? (
-                    <motion.div
-                        ref={carouselRef}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.4 }}
-                        whileTap={{ cursor: "grabbing" }}
-                        className="cursor-grab overflow-hidden w-11/12"
-                    >
-                        <motion.div
-                            key={width}
-                            drag="x"
-                            dragConstraints={{ right: 0, left: -width }}
-                            className="flex sm:space-x-12 space-x-6"
-                        >
-                            {testimonials.map((testimonial, i) => (
-                                <motion.div
+            {isMobile ? (
+                <Carousel
+                    className="rounded-xl pb-14"
+                    navigation={({ setActiveIndex, activeIndex, length }) => (
+                        <div className="absolute bottom-6 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                            {new Array(length).fill("").map((_, i) => (
+                                <span
                                     key={i}
-                                    className="min-h-[35rem] min-w-[25rem] sm:min-h-[30rem]"
-                                >
-                                    <CardTestimonial
-                                        key={testimonial.id}
-                                        id={testimonial.id}
-                                        name={testimonial.name}
-                                        username={testimonial.username}
-                                        description={testimonial.description}
-                                        image={testimonial.image}
-                                        link={testimonial.link}
-                                    />
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </motion.div>
-                ) : (
-                    <div className="items-center w-full mx-6">
-                        <div className="items-center w-full grid grid-cols-3 gap-4">
-                            {testimonials.map((testimonial, i) => (
-                                <CardTestimonial
-                                    key={i}
-                                    id={testimonial.id}
-                                    name={testimonial.name}
-                                    username={testimonial.username}
-                                    description={testimonial.description}
-                                    image={testimonial.image}
-                                    link={testimonial.link}
+                                    className={`block h-2 cursor-pointer rounded-full transition-all content-[''] ${activeIndex === i ? "w-8 bg-secondary" : "w-4 bg-white/50"
+                                        }`}
+                                    onClick={() => setActiveIndex(i)}
                                 />
                             ))}
                         </div>
+                    )}
+                    prevArrow={({ handlePrev }) => (
+                        <IconButton
+                            variant="text"
+                            color="white"
+                            size="lg"
+                            onClick={handlePrev}
+                            className="!absolute top-2/4 left-4 -translate-y-2/4"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="h-6 w-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                                />
+                            </svg>
+                        </IconButton>
+                    )}
+                    nextArrow={({ handleNext }) => (
+                        <IconButton
+                            variant="text"
+                            color="white"
+                            size="lg"
+                            onClick={handleNext}
+                            className="!absolute top-2/4 !right-4 -translate-y-2/4"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="h-6 w-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                />
+                            </svg>
+                        </IconButton>
+                    )}
+                >
+                    {testimonials.map((testimonial, i) => (
+                        <CardTestimonial
+                            key={i}
+                            id={testimonial.id}
+                            name={testimonial.name}
+                            username={testimonial.username}
+                            description={testimonial.description}
+                            image={testimonial.image}
+                            link={testimonial.link}
+                        />
+                    ))}
+                </Carousel>
+            ) : (
+                <div className="items-center justify-center w-full">
+                    <div className="grid grid-cols-3 gap-6 mx-4">
+                        {testimonials.map((testimonial, i) => (
+                            <CardTestimonial
+                                key={i}
+                                id={testimonial.id}
+                                name={testimonial.name}
+                                username={testimonial.username}
+                                description={testimonial.description}
+                                image={testimonial.image}
+                                link={testimonial.link}
+                            />
+                        ))}
                     </div>
-                )}
-
-            </div>
+                </div>
+            )}
         </section>
     )
 }

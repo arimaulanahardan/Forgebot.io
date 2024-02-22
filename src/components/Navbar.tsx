@@ -36,7 +36,7 @@ const Navbar = () => {
                         >
                             <a
                                 key={i}
-                                href={`#${nav.id}`}>
+                                href={`/#${nav.id}`}>
                                 {nav.tittle}
                             </a>
                         </li>

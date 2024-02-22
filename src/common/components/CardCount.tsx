@@ -15,7 +15,7 @@ const CardCount: React.FC<CardCountProps> = ({ id, title, value }) => {
     return (
         <div
             id={id}
-            className="p-6 w-[320px] flex mb-4 flex-col justify-between items-center"
+            className="p-6 w-[320px] flex flex-col justify-between items-center"
             style={{
                 background: `url(${GradientCardCount}) no-repeat center`,
                 backgroundSize: "contain",
