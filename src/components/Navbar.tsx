@@ -54,7 +54,7 @@ const Navbar = () => {
 
 
             {/* Mobile View */}
-            <div className="sm:hidden">
+            <div className="sm:hidden z-50">
                 {toggle ? (
                     <IoClose className="text-white w-[28px] h-[28px] object-contain" onClick={() => setToggle(false)} />
                 ) : (

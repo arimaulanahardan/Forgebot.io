@@ -36,3 +36,8 @@
     cursor: url('./assets/HammerCursor.png'), auto;
     transform: scale(1.05);
 }
+
+.navbar {
+  position: relative; /* Pastikan posisi relatif untuk penggunaan z-index */
+  z-index: 9999; /* Pastikan tampil di depan konten lain */
+}
