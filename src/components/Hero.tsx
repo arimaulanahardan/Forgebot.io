@@ -50,7 +50,10 @@ const Hero = () => {
                         </div>
                     </div>
                 </h1>
-                <img src={HeroImage} alt="HeroImage" className="sm:w-[550px] w-[400px] object-contain " />
+                <div className="flex justify-end ">
+
+                <img src={HeroImage} alt="HeroImage" className="w-full" />
+                </div>
             </div>
             <span className='absolute z-0 -right-1 aspect-square w-[20%] h-[20%] rounded-full circle__gradient animate-pulse' />
         </section>

@@ -4,7 +4,6 @@ import styles from '../styles';
 import { Carousel, IconButton } from "@material-tailwind/react";
 
 const Benefit = () => {
-    const isMobile = window.innerWidth <= 762;
     return (
         <section
             id='services'
@@ -20,11 +19,9 @@ const Benefit = () => {
                 <p className={`${styles.paragraph} mt-4 sm:w-[80%] sm:text-left text-center w-full`}>
                     Experience the future of trading with ForgeBot, your all-in-one solution across multiple blockchians, offering seamless integration with Telegram for a user-friendly experience and effective communication.
                 </p>
-            </div>
-
-            {isMobile ? (
+            </div>            
                 <Carousel
-                    className="rounded-xl pb-14"
+                    className="rounded-xl pb-14 sm:hidden"
                     navigation={({ setActiveIndex, activeIndex, length }) => (
                         <div className="absolute bottom-6 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                             {new Array(length).fill("").map((_, i) => (
@@ -95,23 +92,16 @@ const Benefit = () => {
                         />
                     ))}
                 </Carousel>
-            ) :
-                (
-                    <div className="grid grid-cols-4 w-full gap-4 px-4">
-                        {benefits.map((benefit, i) => (
-                            <CardBenefit
-                                key={i}
-                                id={benefit.id}
-                                title={benefit.tittle}
-                                description={benefit.description}
-                            />
-                        ))}
-                    </div>
-
-                )
-            }
-
-
+            <div className="hidden sm:grid grid-cols-4 w-full gap-4 px-4">
+                {benefits.map((benefit, i) => (
+                    <CardBenefit
+                        key={i}
+                        id={benefit.id}
+                        title={benefit.tittle}
+                        description={benefit.description}
+                    />
+                ))}
+            </div>
         </section >
     )
 }

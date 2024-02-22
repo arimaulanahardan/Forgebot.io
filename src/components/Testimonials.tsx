@@ -4,8 +4,6 @@ import { TestimonialBackground } from "../assets"
 import { Carousel, IconButton } from "@material-tailwind/react";
 
 const Testimonials = () => {
-    const isMobile = window.innerWidth <= 762;
-
     return (
         <section
             id="Testimonial"
@@ -22,10 +20,8 @@ const Testimonials = () => {
                     Testimonials
                 </h1>
             </div>
-
-            {isMobile ? (
                 <Carousel
-                    className="rounded-xl pb-14"
+                    className="rounded-xl pb-14 sm:hidden"
                     navigation={({ setActiveIndex, activeIndex, length }) => (
                         <div className="absolute bottom-6 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                             {new Array(length).fill("").map((_, i) => (
@@ -99,9 +95,8 @@ const Testimonials = () => {
                         />
                     ))}
                 </Carousel>
-            ) : (
                 <div className="items-center justify-center w-full">
-                    <div className="grid grid-cols-3 gap-6 mx-4">
+                    <div className="hidden sm:grid grid-cols-3 gap-6 mx-4">
                         {testimonials.map((testimonial, i) => (
                             <CardTestimonial
                                 key={i}
@@ -115,7 +110,6 @@ const Testimonials = () => {
                         ))}
                     </div>
                 </div>
-            )}
         </section>
     )
 }
