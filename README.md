@@ -22,22 +22,22 @@ To run the project locally, follow these steps:
 3. Install dependencies:
 
    ```bash
-   yarn
+   npm
    ```
 
 4. Run the development server:
 
    ```bash
-   yarn dev
+   npm run dev
    ```
 
    This will start the development server, and you can view the application at `http://localhost:3000`.
 
 ## Scripts
 
-- `yarn dev`: Start the development server.
-- `yarn build`: Build the production-ready application.
-- `yarn preview`: Preview the production build locally.
+- `npm dev`: Start the development server.
+- `npm build`: Build the production-ready application.
+- `npm preview`: Preview the production build locally.
 
 ## Dependencies
 
