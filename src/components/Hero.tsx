@@ -41,7 +41,7 @@ const Hero = () => {
                         <Button
                             style="mt-0"
                             title="Get Started"
-                            onClick={() => { console.log('Button Clicked') }}
+                            onClick= {() => "/docs"}
                         />
                         <div className="button flex rounded-[2px] px-6 py-2 border border-secondary hover">
                             <a className="sm:text-[16px] text-[12px] text-center font-normal text-secondary" href="#">

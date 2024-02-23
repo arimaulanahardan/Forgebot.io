@@ -26,7 +26,7 @@ const CTA = () => {
                     <Button
                         style="mt-0 flex"
                         title="Get Started"
-                        onClick={() => { console.log('Button Clicked') }}
+                        onClick={() => "/docs"}
                         icon={<FaArrowRight className='ml-4 mt-1' />}
                     />
 

@@ -32,13 +32,13 @@ const Navbar = () => {
                 <ul className='list-none sm:flex hidden justify-between items-center w-full'>
                     {navLinks.map((nav, i) => (
                         <li
-                            key={nav.id}
+                            key={i}
                             className={`${styles.paragraph}
                               hover:text-white hover:underline mr-10`}
                         >
                             <a
                                 key={i}
-                                href={`/#${nav.id}`}>
+                                href={nav.link}>
                                 {nav.tittle}
                             </a>
                         </li>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <Button
                     style="mt-0 flex align-center justify-center"
                     title="Docs"
-                    onClick={() => { console.log('Button Clicked') }}
+                    onClick={() => "/docs"}
                     icon={<FaArrowRight className='ml-4 mt-1' />}
                 />
             </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
                         <ul className="text-center p-4">
                             {navLinks.map(nav => (
                                 <li key={nav.id} className="text-white text-xl py-2">
-                                    <a href={`/#${nav.id}`} 
+                                    <a href={nav.link} 
                                     onClick={() => setToggle(false)}>
                                         {nav.tittle}
                                     </a>
